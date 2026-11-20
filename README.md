@@ -12,7 +12,7 @@ Cíl: **jednoduchá webová dokumentace skutečného fyzického zapojení a nam�
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-streamlit run app_preview.py
+streamlit run suricata_lab.py
 ```
 
 V PowerShellu místo `source ...` spusťte `.venv\Scripts\Activate.ps1`.
