@@ -1,0 +1,61 @@
+{
+  "zdroj": "Poskytnutý soubor suricata.yaml, 18. 11. 2026 (snímek konfigurace, nikoli důkaz běžící konfigurace)",
+  "generovana_verze_v_komentari": "Suricata 8.0.7",
+  "suricata_version_key": "8.0",
+  "home_net": "[10.10.0.0/16]",
+  "external_net": "!$HOME_NET",
+  "af_packet_rezim": "transparentní L2 IPS / copy-mode: ips",
+  "af_packet_interfaces": [
+    {
+      "rozhrani": "enp2s0",
+      "vlaken": 1,
+      "rezim": "ips",
+      "preposila_do": "enx6c6e071f144e",
+      "typ_clusteru": "cluster_flow",
+      "cluster_id": 98,
+      "tpacket_v3": true,
+      "buffer_size": 64535,
+      "mmap": true
+    },
+    {
+      "rozhrani": "enx6c6e071f144e",
+      "vlaken": 1,
+      "rezim": "ips",
+      "preposila_do": "enp2s0",
+      "typ_clusteru": "cluster_flow",
+      "cluster_id": 97,
+      "tpacket_v3": true,
+      "buffer_size": 64535,
+      "mmap": true
+    }
+  ],
+  "pravidla_v_yaml": [
+    "suricata.rules",
+    "/etc/suricata/rules/local.rules",
+    "/etc/suricata/rules/http_lab_ips.rules"
+  ],
+  "default_rule_path": "/var/lib/suricata/rules",
+  "logovaci_slozka": "/var/log/suricata/",
+  "statistiky_interval_s": 8,
+  "logy": {
+    "fast": {
+      "enabled": true,
+      "filename": "fast.log"
+    },
+    "eve-log": {
+      "enabled": true,
+      "filename": "eve.json"
+    },
+    "stats": {
+      "enabled": true,
+      "filename": "stats.log"
+    }
+  },
+  "rozsah_prukazu": "YAML odkazuje na pravidla, ale bez systemd unit, suricata.rules a výpisu načtených pravidel nelze nezávisle potvrdit přesně běžící konfiguraci.",
+  "poznamka_tpacket": "tpacket-v3: yes je nastaveno na obou inline IPS rozhraních; dokumentace doporučuje pro AF_PACKET IPS tpacket v2. Zachovat původní snímek a změnu případně ověřit v odděleném experimentu.",
+  "pomocne_konfigurace": {
+    "classification.config": "Definice klasifikací alertů",
+    "reference.config": "Mapování externích odkazů signatur",
+    "threshold.config": "V zaslané kopii nejsou nekomentované threshold/suppress/rate_filter direktivy"
+  }
+}

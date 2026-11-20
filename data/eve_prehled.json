@@ -1,0 +1,43 @@
+{
+  "soubor": "eve.json",
+  "velikost_bajtu": 62238317,
+  "pocet_radku": 41157,
+  "cas_od": "2026-10-25T20:04:41.526858+0100",
+  "cas_do": "2026-11-17T19:03:32.788836+0100",
+  "typy_udalosti": {
+    "stats": 5035,
+    "alert": 27105,
+    "dhcp": 6,
+    "dns": 3992,
+    "mdns": 1216,
+    "flow": 3705,
+    "fileinfo": 55,
+    "http": 43
+  },
+  "pocet_alertu": 27105,
+  "akce_alertu": {
+    "allowed": 26817,
+    "blocked": 288
+  },
+  "dny": {
+    "2026-10-25": 15,
+    "2026-10-26": 9671,
+    "2026-11-17": 31471
+  },
+  "laboratorni_den": "2026-11-17",
+  "pocet_laboratornich_alertu": 470,
+  "laboratorni_akce": {
+    "blocked": 217,
+    "allowed": 253
+  },
+  "laboratorni_cas_od": "2026-11-17T09:26:56.776971+0100",
+  "laboratorni_cas_do": "2026-11-17T18:17:38.057332+0100",
+  "vyrazny_sum": "Záznamy z více dat; 25 794 událostí SURICATA Ethertype unknown zatěžuje výchozí přehled.",
+  "filtrovany_evebox_demo": {
+    "alert": 477,
+    "flow": 359,
+    "fileinfo": 50,
+    "http": 38
+  },
+  "poznamka": "Počet alertů s akcí blocked není počet unikátních útoků ani zaručený počet blokovaných paketů. Výsledky HTTP scénářů vyhodnocujte z experimentálních výstupů."
+}

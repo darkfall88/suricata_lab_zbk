@@ -1,0 +1,29 @@
+# Příklady vyňaté z poskytnutého suricata.yaml
+# Adresace a síťové skupiny
+HOME_NET: "[10.10.0.0/16]"
+EXTERNAL_NET: "!$HOME_NET"
+
+# Aktivní konfigurace AF_PACKET (ve zdrojovém YAML)
+af-packet:
+  - interface: enp2s0
+    threads: 1
+    cluster-id: 98
+    cluster-type: cluster_flow
+    copy-mode: ips
+    copy-iface: enx6c6e071f144e
+    tpacket-v3: yes
+    use-mmap: yes
+  - interface: enx6c6e071f144e
+    threads: 1
+    cluster-id: 97
+    cluster-type: cluster_flow
+    copy-mode: ips
+    copy-iface: enp2s0
+    tpacket-v3: yes
+    use-mmap: yes
+
+# Odkazované sady pravidel
+rule-files:
+  - suricata.rules
+  - /etc/suricata/rules/local.rules
+  - /etc/suricata/rules/http_lab_ips.rules

@@ -1,0 +1,11 @@
+sid,signatura,IDS – akce,IPS – akce,role
+1000100,LAB V2 HTTP REQUEST CONTROL,alert,alert,Kontrolní pravidlo
+1000121,LAB V2 SQLI RAW URL example,alert,drop,Testovací detekční pravidlo
+1000122,LAB V2 XSS RAW URL example,alert,drop,Testovací detekční pravidlo
+1000123,LAB V2 TRAVERSAL RAW URL example,alert,drop,Testovací detekční pravidlo
+1000131,LAB V2 SQLI POST form example,alert,drop,Testovací detekční pravidlo
+1000132,LAB V2 XSS POST form example,alert,drop,Testovací detekční pravidlo
+1000133,LAB V2 TRAVERSAL POST form example,alert,drop,Testovací detekční pravidlo
+1000141,LAB V2 SQLI POST JSON example,alert,drop,Testovací detekční pravidlo
+1000142,LAB V2 XSS POST JSON example,alert,drop,Testovací detekční pravidlo
+1000143,LAB V2 TRAVERSAL POST JSON example,alert,drop,Testovací detekční pravidlo

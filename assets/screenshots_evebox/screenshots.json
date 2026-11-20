@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "01-prehled.png",
+    "tab": "1. Přehled událostí",
+    "title": "Přehled událostí v EveBoxu",
+    "description": "EveBox v režimu oneshot nad vybranými historickými událostmi: 924 událostí, z toho 477 alertů. Jde o filtrovaný demonstrační soubor, nikoliv celý původní EVE archiv."
+  },
+  {
+    "filename": "02-icmp-blokovani.png",
+    "tab": "2. Blokování ICMP",
+    "title": "Blokování ICMP pomocí IPS pravidla",
+    "description": "Signatura TEST IPS - ICMP BLOCK (SID 1000001); zdroj 10.20.0.100, cíl 10.10.0.100, protokol ICMP. V detailu alertu je zaznamenána akce blocked."
+  },
+  {
+    "filename": "03-port-scan.png",
+    "tab": "3. TCP skenování",
+    "title": "Zachycení skenování TCP portů",
+    "description": "Signatura LAB TCP SCAN RATE FILTER (SID 1000011); v zobrazeném detailu alertu je akce blocked. Konkrétní záznam se vztahuje ke spojení na TCP port 445."
+  },
+  {
+    "filename": "04-http-sqli.png",
+    "tab": "4. SQL injection",
+    "title": "Blokovaný HTTP požadavek s indikátory SQL injection",
+    "description": "Signatura LAB V2 SQLI RAW URL example (SID 1000121); HTTP GET požadavek na port 8080, zdroj 10.20.0.100, cíl 10.10.0.100. V zobrazeném detailu je akce blocked."
+  }
+]

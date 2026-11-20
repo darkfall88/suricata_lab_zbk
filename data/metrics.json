@@ -1,0 +1,19 @@
+{
+  "tcp_stability_600s_linux_mean_mbps": 948.8,
+  "tcp_stability_600s_windows_mean_mbps": 948.717,
+  "tcp_stability_duration_sec": 600,
+  "tcp_stability_flows": 4,
+  "udp_max_tested_zero_loss_rate_mbps": 210,
+  "udp_max_tested_zero_loss_duration_sec": 30,
+  "udp_problematic_250m_drops_delta": 27030,
+  "ping_idle_avg_ms": 14.603,
+  "ping_tcp_load_avg_ms": 13.355,
+  "ping_loss_pct": 0,
+  "suricata_pidstat_625s_mean_cpu_pct_one_core": 72.15,
+  "suricata_pidstat_625s_rss_mib": 449.652,
+  "suricata_service_after_test": "active",
+  "suricata_service_restarts_reported": 0,
+  "has_real_eve_json": false,
+  "has_actual_sura_yaml": false,
+  "has_uploaded_photos": false
+}

@@ -1,0 +1,11 @@
+sid,action,message,protocol,source
+1000100,alert,LAB V2 HTTP REQUEST CONTROL,http,http_v2_ips.rules
+1000121,drop,LAB V2 SQLI RAW URL example,http,http_v2_ips.rules
+1000122,drop,LAB V2 XSS RAW URL example,http,http_v2_ips.rules
+1000123,drop,LAB V2 TRAVERSAL RAW URL example,http,http_v2_ips.rules
+1000131,drop,LAB V2 SQLI POST form example,http,http_v2_ips.rules
+1000132,drop,LAB V2 XSS POST form example,http,http_v2_ips.rules
+1000133,drop,LAB V2 TRAVERSAL POST form example,http,http_v2_ips.rules
+1000141,drop,LAB V2 SQLI POST JSON example,http,http_v2_ips.rules
+1000142,drop,LAB V2 XSS POST JSON example,http,http_v2_ips.rules
+1000143,drop,LAB V2 TRAVERSAL POST JSON example,http,http_v2_ips.rules

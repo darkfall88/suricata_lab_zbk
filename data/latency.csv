@@ -1,0 +1,3 @@
+﻿case,label,packets_sent,packets_received,packet_loss_pct,rtt_min_ms,rtt_avg_ms,rtt_max_ms,rtt_mdev_ms,duration_sec,source
+idle,Bez TCP zátěže,150,150,0.0,3.164,14.603,23.308,6.021,29.946,chat_2026_11_17
+tcp_load,Při TCP zátěži (~949 Mbit/s po 30 s),200,200,0.0,3.033,13.355,23.473,5.342,39.976,chat_2026_11_17

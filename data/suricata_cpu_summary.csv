@@ -1,0 +1,7 @@
+﻿experiment,cpu_average_pct_one_core,rss_kib,rss_mib,source,confidence
+tcp_30s_1stream,53.73,460016,449.234,original_upload_3.txt,pidstat measurement aligned with experiment
+tcp_30s_4streams,43.37,461040,450.234,original_upload_3.txt,pidstat measurement aligned with experiment
+udp_10M_default,1.71,461040,450.234,original_upload_6.txt,pidstat interval aligned with UDP run
+udp_100M_default,10.4,461040,450.234,original_upload_6.txt,pidstat interval aligned with UDP run
+udp_500M_default,27.06,461040,450.234,original_upload_6.txt,pidstat interval aligned with UDP run
+tcp_600s_4streams,72.15,460444,449.652,original_upload_7.txt,"625-second monitoring window, includes edge idle periods"

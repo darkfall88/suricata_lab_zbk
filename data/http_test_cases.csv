@@ -1,0 +1,21 @@
+﻿index,case,family,method,expected_match,expected_sid,observed_outcome,observed_action,source,notes
+1,baseline,benign,GET,no,,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+2,benign_words,benign,GET,no,,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+3,benign_path,benign,GET,no,,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+4,sql_encoded,sqli,GET,yes,1000121,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+5,sql_mixed_case,sqli,GET,yes,1000121,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+6,sql_encoded_or,sqli,GET,investigate,1000121,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+7,sql_double,sqli,GET,investigate,1000121,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+8,xss_encoded,xss,GET,yes,1000122,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+9,xss_mixed_case,xss,GET,yes,1000122,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+10,xss_double,xss,GET,investigate,1000122,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+11,trav_encoded,traversal,GET,yes,1000123,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+12,trav_dot_encoded,traversal,GET,investigate,1000123,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+13,trav_double,traversal,GET,investigate,1000123,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+14,trav_plain,traversal,GET,investigate,1000123,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+15,sql_post_form,sqli,POST,yes,1000131,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+16,xss_post_form,xss,POST,yes,1000132,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+17,trav_post_form,traversal,POST,yes,1000133,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+18,sql_post_json,sqli,POST,yes,1000141,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+19,xss_post_json,xss,POST,yes,1000142,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json
+20,trav_post_json,traversal,POST,yes,1000143,,,http_advanced_v2.py,Pozorovaný výsledek vyplnit po dodání skutečného protokolu testu / eve.json

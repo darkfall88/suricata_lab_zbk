@@ -1,0 +1,8 @@
+﻿id,configured_rate_mbps,actual_send_mbps,recv_buffer_mib,datagrams_sent,server_expected,server_lost,server_loss_pct,jitter_ms,kernel_drops_delta,report_quality,notes,source
+udp_10M_default,10,10.5,0.0625,32772,32771,0,0.0,1.634,,complete,"Původní test, výchozí Windows UDP buffer ~64 KiB",chat_2026_11_17
+udp_100M_default,100,105,0.0625,327685,327684,1136,0.3467,0.161,,complete,"Původní test, Windows buffer ~64 KiB",chat_2026_11_17
+udp_500M_default,500,524,0.0625,1638408,,,,,,split_sessions,"Více Windows UDP relací a timeoutů, nelze určit jednu kompletní ztrátovost",chat_2026_11_17
+udp_100M_1MiB,100,105,1,327685,327684,0,0.0,0.166,0,complete,Windows buffer 1 MiB; bez ztrát,chat_2026_11_17 + prior_iperf_summary
+udp_150M_1MiB,150,157,1,491524,491523,0,0.0,0.107,0,complete,Windows buffer 1 MiB; bez ztrát,chat_2026_11_17 + prior_iperf_summary
+udp_200M_1MiB,200,210,1,655365,655364,0,0.0,0.081,0,complete,Windows buffer 1 MiB; bez ztrát,chat_2026_11_17 + prior_iperf_summary
+udp_250M_1MiB,250,262,1,819203,,,,,27030,split_sessions,Windows restartuje relace; 27 030 nových capture.kernel_drops; globální UDP ztrátovost neznámá,chat_2026_11_17 + prior_iperf_summary

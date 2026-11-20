@@ -1,0 +1,116 @@
+{
+  "project": "Advanced Configuration of the Suricata IPS",
+  "experiment_date": "2026-11-17",
+  "suricata_version": "8.0.7 (podle dodaných podkladů)",
+  "mode": "transparentní L2 inline IPS / AF_PACKET",
+  "topology_order": [
+    "Útočný Lenovo ThinkPad L380 (Linux Mint, 10.20.0.100)",
+    "Cisco Catalyst C3850 – 24portový L3 switch",
+    "Transparentní Suricata IPS (Lenovo IdeaPad Gaming 3 15ACH6, Linux Mint)",
+    "Cílový Lenovo V310-15IKB (Windows 10, 10.10.0.100)"
+  ],
+  "hosts": {
+    "attacker_linux": {
+      "hostname": "gh44sh-ThinkPad-L380",
+      "ip": "10.20.0.100",
+      "hardware": "Lenovo ThinkPad L380"
+    },
+    "ips_linux": {
+      "hostname": "kuribam-IdeaPad-Gaming-3-15ACH6",
+      "iface_router": "enx6c6e071f144e",
+      "iface_windows": "enp2s0",
+      "addressed": "rozhraní v bridge bez IP",
+      "hardware": "Lenovo IdeaPad Gaming 3 15ACH6"
+    },
+    "windows_target": {
+      "ip": "10.10.0.100",
+      "iperf_tcp_port": 5001,
+      "iperf_udp_port": 5002,
+      "http_lab_port": 8080,
+      "hardware": "Lenovo V310-15IKB",
+      "os": "Windows 10"
+    }
+  },
+  "evidence_limitations": [
+    "Konfigurace suricata.yaml je nahrána; běhová shoda s testy nebyla nezávisle ověřena pomocí systemd unit a startovacího výpisu.",
+    "Soubor /var/lib/suricata/rules/suricata.rules a systemd unit nebyly nahrány.",
+    "EVE JSON a individuální výsledky HTTP pokusů nebyly nahrány.",
+    "IPS HTTP pravidla v dodané kopii mají na disku jiný název než cesta v suricata.yaml.",
+    "Ztráty kernel_drops při stabilitním testu nelze přesně dopočítat z neporovnatelných snímků.",
+    "Fotografie dokládají fyzickou sestavu; mapování portů 10 a 20 pochází z popisu uživatele, nikoliv z konfigurace switche."
+  ],
+  "network_device": {
+    "model": "Cisco Catalyst C3850",
+    "type": "24portový L3 switch",
+    "role": "laboratorní síťová infrastruktura"
+  },
+  "photos": [
+    {
+      "file": "assets/photos/20261117_093447.jpg",
+      "description": "Celkový pohled shora: Cisco Catalyst C3850, cílový Lenovo V310 (Windows 10), útočný ThinkPad L380 a Suricata IPS na IdeaPad Gaming 3."
+    },
+    {
+      "file": "assets/photos/20261117_093500.jpg",
+      "description": "Šikmý pohled na reálné fyzické zapojení, ethernetovou kabeláž a všechna tři laboratorní koncová zařízení."
+    },
+    {
+      "file": "assets/photos/20261117_103908.jpg",
+      "description": "Praktický provoz laboratoře: na notebooku vlevo je otevřené webové rozhraní EveBox, vpravo je zobrazeno vývojové prostředí s konfigurací/kódem."
+    }
+  ],
+  "vlan_topology": {
+    "vlan_10": {
+      "role": "interní / simulovaná domácí síť",
+      "network": "10.10.0.0/16",
+      "svi_gateway": "10.10.0.1",
+      "switch_access_port": 10,
+      "ips_between_switch_and_windows": true,
+      "target": "10.10.0.100"
+    },
+    "vlan_20": {
+      "role": "externí / simulovaná útočná síť",
+      "network": "10.20.0.0/16",
+      "svi_gateway": "10.20.0.1",
+      "switch_access_port": 20,
+      "attacker": "10.20.0.100"
+    },
+    "inter_vlan_routing": "Cisco Catalyst C3850",
+    "traffic_direction": "Linux VLAN 20 → Cisco L3 switch (routing) → port 10 VLAN 10 → Suricata AF_PACKET bridge → Windows VLAN 10",
+    "ips_bridge_ip": "žádná"
+  },
+  "config_snapshot_received": "2026-11-18",
+  "af_packet_interfaces": [
+    {
+      "rozhrani": "enp2s0",
+      "vlaken": 1,
+      "rezim": "ips",
+      "preposila_do": "enx6c6e071f144e",
+      "typ_clusteru": "cluster_flow",
+      "cluster_id": 98,
+      "tpacket_v3": true,
+      "buffer_size": 64535,
+      "mmap": true
+    },
+    {
+      "rozhrani": "enx6c6e071f144e",
+      "vlaken": 1,
+      "rezim": "ips",
+      "preposila_do": "enp2s0",
+      "typ_clusteru": "cluster_flow",
+      "cluster_id": 97,
+      "tpacket_v3": true,
+      "buffer_size": 64535,
+      "mmap": true
+    }
+  ],
+  "authors": [
+    {
+      "name": "Oryna Borovyk",
+      "login": "bor0250"
+    },
+    {
+      "name": "David Kunčík",
+      "login": "kun212"
+    }
+  ]
+}

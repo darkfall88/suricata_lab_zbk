@@ -1,0 +1,6 @@
+﻿experiment,device,connections,active_duration_sec,intervals,mean_active_mbps,min_interval_mbps,max_interval_mbps,report_mbps,report_note,source
+tcp_30s_1stream,linux,1,30,30,947.5,921.0,955.0,,30s phase; final client overall 60.35s/471 Mbps misleading due to tail/timeout,original_upload_4.txt
+tcp_30s_4streams,linux,4,30,30,949.867,933.0,1000.0,949,,original_upload_4.txt
+tcp_30s_4streams,windows,4,30,30,947.0,915.0,949.0,947,,original_upload_5.txt
+tcp_600s_4streams,linux,4,600,60,948.8,946.0,953.0,,Client 600s recording has no overall SUM,original_upload_8.txt
+tcp_600s_4streams,windows,4,600,60,948.717,945.0,949.0,944,Windows 0–603.08s includes close-out + recv timeout,original_upload_9.txt

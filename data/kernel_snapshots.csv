@@ -1,0 +1,9 @@
+﻿order,snapshot,kernel_packets,kernel_drops,series_id,comparable_with_prev,note,source
+1,udp100_before,16774741,169071,udp_initial100_250,no,Před UDP 100M s 1 MiB,chat_2026_11_17
+2,udp100_after,17102498,169071,udp_initial100_250,yes,Po UDP 100M s 1 MiB,chat_2026_11_17
+3,udp250_after,17921769,196101,udp_initial100_250,yes,Po UDP 250M s 1 MiB,chat_2026_11_17
+4,udp150_before,17922850,196101,udp_150_200,no,Před UDP 150M,chat_2026_11_17
+5,udp150_after,18414430,196101,udp_150_200,yes,Po UDP 150M,chat_2026_11_17
+6,udp200_after,19069841,196101,udp_150_200,yes,Po UDP 200M,chat_2026_11_17
+7,stability_before,2692528,196101,stability_inconsistent,no,Před 600s TCP testem – nesouvislé hodnoty,chat_2026_11_17
+8,stability_after,56106611,2800,stability_inconsistent,no,Po 600s TCP testu – reset/neporovnatelné,chat_2026_11_17
