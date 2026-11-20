@@ -6,6 +6,10 @@
 
 Cíl: **jednoduchá webová dokumentace skutečného fyzického zapojení a naměřených experimentů**. Data jsou připravená pro `pandas`/Streamlit. Archiv není nová simulace a neobsahuje uměle vytvořené výsledky.
 
+## Webová adresa
+
+https://suricata-lab.streamlit.app/
+
 ## Rychlé použití
 
 ```bash
