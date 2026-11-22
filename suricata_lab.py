@@ -489,8 +489,8 @@ elif panel == "Topologie a konfigurace IPS":
 
     st.subheader("Hardwarové prostředky počítače se Suricatou")
     st.markdown("""
-    IPS běželo na notebooku **Lenovo IdeaPad Gaming 3 15ACH6 (typ 82K2)**
-    s operačním systémem **Linux Mint**. Skutečnou hardwarovou konfiguraci
+    IPS běželo na notebooku Lenovo IdeaPad Gaming 3 15ACH6 (typ 82K2)
+    s operačním systémem Linux Mint. Skutečnou hardwarovou konfiguraci
     jsme ověřili příkazy `lscpu`, `free -h`, `lspci`, `lsusb` a `ethtool` přímo
     na zařízení, na kterém proběhly experimenty.
     """)
@@ -509,9 +509,9 @@ elif panel == "Topologie a konfigurace IPS":
         "Uvedených 5,6 GiB je hodnota hlášená systémem, nikoli údaj o velikosti osazených modulů RAM."
     )
     st.markdown("""
-    Při desetiminutovém měření stability zabírala Suricata přibližně **450 MiB
-    operační paměti RSS** a její průměrné vytížení bylo zhruba **72,15 %
-    jednoho logického CPU** podle `pidstat`. Tyto hodnoty popisují samotný
+    Při desetiminutovém měření stability zabírala Suricata přibližně 450 MiB
+    operační paměti RSS a její průměrné vytížení bylo zhruba 72,15 %
+    jednoho logického CPU podle `pidstat`. Tyto hodnoty popisují samotný
     proces Suricaty, nikoli využití celé kapacity notebooku.
     """)
 
@@ -1058,8 +1058,8 @@ else:
         {"Činnost": "Zpracování a publikace webové dokumentace", "Hlavní odpovědnost": "David Kunčík (kun212)"},
     ]), hide_index=True, use_container_width=True)
     st.markdown("""
-    **Oryna Borovyk** se podílela především na praktické realizaci laboratorní
-    sítě, konfiguraci IPS a provádění experimentů. **David Kunčík** připravil
+    Oryna Borovyk se podílela především na praktické realizaci laboratorní
+    sítě, konfiguraci IPS a provádění experimentů. David Kunčík připravil
     návrh řešení, asistoval při testování a zpracoval výsledky do samostatné
     webové dokumentace ve Streamlitu. Oba jsme tedy přispěli k praktickému
     ověření navrženého systému, každý se zaměřením na jinou část projektu.
